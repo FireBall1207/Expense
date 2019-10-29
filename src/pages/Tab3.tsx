@@ -1,15 +1,18 @@
-import { IonAvatar, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, IonItemSliding, IonItemOptions, IonItemOption } from '@ionic/react';
+import { IonAvatar,IonRouterOutlet, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, IonItemSliding, IonItemOptions, IonItemOption, IonTabButton, IonButton } from '@ionic/react';
 import React from 'react';
-
-interface Site {
-    name: string;
-    place: string;
-}
+import { IonReactRouter } from '@ionic/react-router';
+import { Route } from 'react-router';
+import SitePage from './SitePage';
+// interface Site {
+//     name: string;
+//     place: string;
+// }
 
 const Tab3page: React.FC = () => {
 
     return (
         <IonPage>
+            <IonReactRouter>
             <IonHeader>
                 <IonToolbar>
                     <IonTitle>Sites</IonTitle>
@@ -17,17 +20,24 @@ const Tab3page: React.FC = () => {
             </IonHeader>
             <IonContent>
                 <IonList>
+                    <IonRouterOutlet>
+                        <Route path="/SitePage" component={SitePage}></Route> 
+                    </IonRouterOutlet>
                     <IonItemSliding>
-                        <IonItem>
-                            <IonLabel>Goa</IonLabel>
+                       {/* <IonButton href="/SitePage"> */}
+                        <IonItem href="/SitePage">
+                            <IonLabel>
+                                Goa
+                            </IonLabel>
                         </IonItem>
+                        {/* </IonButton> */}
                         <IonItemOptions side="end">
                             <IonItemOption onClick={() => { }}>Visit</IonItemOption>
                         </IonItemOptions>
                     </IonItemSliding>
 
                     <IonItemSliding>
-                        <IonItem>
+                        <IonItem href="/SitePage">
                             <IonLabel>Mumbai</IonLabel>
                         </IonItem>
                         <IonItemOptions side="end">
@@ -36,6 +46,7 @@ const Tab3page: React.FC = () => {
                     </IonItemSliding>
                 </IonList>
             </IonContent>
+            </IonReactRouter>
         </IonPage >
     );
 };
