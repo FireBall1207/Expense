@@ -1,7 +1,7 @@
-import { IonAvatar,IonRouterOutlet, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, IonItemSliding, IonItemOptions, IonItemOption, IonTabButton, IonButton } from '@ionic/react';
+import { IonAvatar, IonRouterOutlet, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, IonItemSliding, IonItemOptions, IonItemOption, IonTabButton, IonButton } from '@ionic/react';
 import React from 'react';
 import { IonReactRouter } from '@ionic/react-router';
-import { Route } from 'react-router';
+import { Route, Redirect } from 'react-router';
 import SitePage from './SitePage';
 // interface Site {
 //     name: string;
@@ -9,43 +9,43 @@ import SitePage from './SitePage';
 // }
 
 const Tab3page: React.FC = () => {
-
     return (
         <IonPage>
             <IonReactRouter>
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Sites</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent>
-                <IonList>
-                    <IonRouterOutlet>
-                        <Route path="/SitePage" component={SitePage}></Route> 
-                    </IonRouterOutlet>
-                    <IonItemSliding>
-                       {/* <IonButton href="/SitePage"> */}
-                        <IonItem href="/SitePage">
-                            <IonLabel>
-                                Goa
+                <IonRouterOutlet>
+                    <Route path="/SitePage" component={SitePage}></Route>
+                    <Redirect exact from="/tab3" to="/SitePage" />
+                </IonRouterOutlet>
+                <IonHeader>
+                    <IonToolbar>
+                        <IonTitle>Sites</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
+                <IonContent>
+                    <IonList>
+                        <IonItemSliding>
+                            {/* <IonButton href="/SitePage"> */}
+                            <IonItem href="/SitePage">
+                                <IonLabel>
+                                    Goa
                             </IonLabel>
-                        </IonItem>
-                        {/* </IonButton> */}
-                        <IonItemOptions side="end">
-                            <IonItemOption onClick={() => { }}>Visit</IonItemOption>
-                        </IonItemOptions>
-                    </IonItemSliding>
+                            </IonItem>
+                            {/* </IonButton> */}
+                            <IonItemOptions side="end">
+                                <IonItemOption onClick={() => { }}>Visit</IonItemOption>
+                            </IonItemOptions>
+                        </IonItemSliding>
 
-                    <IonItemSliding>
-                        <IonItem href="/SitePage">
-                            <IonLabel>Mumbai</IonLabel>
-                        </IonItem>
-                        <IonItemOptions side="end">
-                            <IonItemOption onClick={() => { }}>Visit</IonItemOption>
-                        </IonItemOptions>
-                    </IonItemSliding>
-                </IonList>
-            </IonContent>
+                        <IonItemSliding>
+                            <IonItem href="/SitePage">
+                                <IonLabel>Mumbai</IonLabel>
+                            </IonItem>
+                            <IonItemOptions side="end">
+                                <IonItemOption onClick={() => { }}>Visit</IonItemOption>
+                            </IonItemOptions>
+                        </IonItemSliding>
+                    </IonList>
+                </IonContent>
             </IonReactRouter>
         </IonPage >
     );
