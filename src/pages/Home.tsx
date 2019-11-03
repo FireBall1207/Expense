@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import './Home.css'
 
 const Home: React.FC = () => {
-  let [username ,updateUsername] = useState("")
-  let [password ,updatePassword] = useState("")
+  let [username ,updateUsername] = useState("Esatto")
+  let [password ,updatePassword] = useState("supersecret")
   let [alert, updateAlert] = useState(false)
   return (
     <IonPage>
