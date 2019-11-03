@@ -6,7 +6,10 @@ import Tab3page from './Tab3';
 
 const Site: React.FC = () => {
   return (
-    <IonApp>
+    <IonPage>
+      <div>
+        qwertyuio
+      </div>
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
@@ -33,7 +36,7 @@ const Site: React.FC = () => {
           </IonTabBar>
         </IonTabs>
       </IonReactRouter>
-    </IonApp>
+    </IonPage>
   );
 };
 
