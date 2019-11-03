@@ -8,26 +8,16 @@ import Tab1 from './Tab1';
 const Site: React.FC = () => {
   return (
     <IonApp>
-          <div>adssad</div>
+      
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-<<<<<<< HEAD
-            <Route path="/tab1" component={Tab1}></Route>
-            <Route path="/tab2"></Route>
-            <Route path="/tab3" component={Tab3page}></Route> 
-          
-          </IonRouterOutlet>
-          <IonTabBar slot="bottom">
-            <IonTabButton tab="tab1" href="/tab1">
-=======
             <Route path="/tab3"></Route>
             <Route path="/tab2"></Route>
-            <Route path="/tab1" component={Tab3page}></Route> 
+            <Route path="/tab1"></Route> 
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
->>>>>>> 68ccb531ca148aa9f05e3466abae8e9169c16589
               <IonIcon />
               <IonLabel>Sites</IonLabel>
             </IonTabButton>
