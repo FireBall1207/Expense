@@ -1,4 +1,4 @@
-import { IonAvatar, IonRouterOutlet, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, IonItemSliding, IonItemOptions, IonItemOption } from '@ionic/react';
+import { IonAvatar, IonRouterOutlet, IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar, useIonViewWillEnter, IonItemSliding, IonItemOptions, IonItemOption, IonButtons, IonBackButton } from '@ionic/react';
 import React from 'react';
 import { IonReactRouter } from '@ionic/react-router';
 // import { Route } from 'react-router';
@@ -10,6 +10,9 @@ const SitePage: React.FC = () => {
                 <IonHeader>
                     <IonToolbar>
                         <IonTitle>Sites Page</IonTitle>
+                        <IonButtons slot="start">
+                            <IonBackButton defaultHref="/" />
+                        </IonButtons>
                     </IonToolbar>
                 </IonHeader>
                 <IonContent>
