@@ -12,6 +12,7 @@ const Site: React.FC = () => {
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
+<<<<<<< HEAD
             <Route path="/tab1" component={Tab1}></Route>
             <Route path="/tab2"></Route>
             <Route path="/tab3" component={Tab3page}></Route> 
@@ -19,17 +20,28 @@ const Site: React.FC = () => {
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="tab1" href="/tab1">
-              <IonIcon />
-              <IonLabel>Tab One</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab2">
-              <IonIcon />
-              <IonLabel>Tab two</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab="tab3" href="/tab3">
+=======
+            <Route path="/tab3"></Route>
+            <Route path="/tab2"></Route>
+            <Route path="/tab1" component={Tab3page}></Route> 
+          </IonRouterOutlet>
+          <IonTabBar slot="bottom">
+          <IonTabButton tab="tab1" href="/tab1">
+>>>>>>> 68ccb531ca148aa9f05e3466abae8e9169c16589
               <IonIcon />
               <IonLabel>Sites</IonLabel>
             </IonTabButton>
+            
+            <IonTabButton tab="tab2">
+              <IonIcon />
+              <IonLabel>Accounts</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="tab3">
+              <IonIcon />
+              <IonLabel>Expenses</IonLabel>
+            </IonTabButton>
+            
           </IonTabBar>
         </IonTabs>
       </IonReactRouter>
